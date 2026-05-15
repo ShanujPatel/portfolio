@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import styles from './Projects.module.css'
 import ProjectModal from './ProjectModal'
+import retail1 from '../assets/retail-1.png'
+import retail2 from '../assets/retail-2.png'
 
 const projects = [
   {
@@ -47,7 +49,7 @@ const projects = [
       'Reduced average issue resolution time significantly',
     ],
     tags: ['Power Apps', 'Power Automate', 'Power BI'],
-    images: [],
+    images: [retail1, retail2],
     demo: '#',
     code: '#',
   },
