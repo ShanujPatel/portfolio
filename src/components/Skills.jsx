@@ -1,7 +1,7 @@
 import styles from './Skills.module.css'
 
 const skills = [
-  { category: 'Microsoft 365', items: ['SharePoint Online', 'Microsoft Teams', 'Exchange Online', 'OneDrive'] },
+  { category: 'Microsoft 365', items: ['SharePoint Online', 'Microsoft Teams', 'Exchange Online', 'Copilot'] },
   { category: 'Power Platform', items: ['Power Automate', 'Power Apps', 'Power BI', 'Power Virtual Agents'] },
   { category: 'Azure & Admin', items: ['Azure AD / Entra ID', 'Intune', 'Microsoft Graph API', 'Conditional Access'] },
   { category: 'Dev & Scripting', items: ['PowerShell', 'PnP PowerShell', 'JSON / REST APIs', 'Git'] },
