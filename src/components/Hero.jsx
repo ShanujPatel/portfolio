@@ -1,3 +1,4 @@
+import profilePhoto from '../assets/profile.jpg'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -14,6 +15,9 @@ export default function Hero() {
           <a href="#projects" className={styles.primary}>View My Work</a>
           <a href="#contact" className={styles.secondary}>Get In Touch</a>
         </div>
+      </div>
+      <div className={styles.photoWrap}>
+        <img src={profilePhoto} alt="Shanuj Patel" className={styles.photo} />
       </div>
       <div className={styles.blob} aria-hidden="true" />
     </section>

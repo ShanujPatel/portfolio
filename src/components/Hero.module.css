@@ -5,7 +5,6 @@
   padding: 96px 24px 80px;
   position: relative;
   overflow: hidden;
-  /* Fluent 2 hero: clean white with a subtle brand-tinted gradient */
   background: linear-gradient(160deg, #ffffff 55%, #ebf3fb 100%);
 }
 
@@ -15,6 +14,57 @@
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
+  /* leave room for the photo on the right */
+  padding-right: 260px;
+}
+
+/* Circular profile photo */
+.photoWrap {
+  position: absolute;
+  right: max(40px, calc(50% - 440px));
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid #fff;
+  box-shadow: var(--shadow-lg), 0 0 0 1px var(--border);
+}
+
+@media (max-width: 780px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .content {
+    padding-right: 0;
+    order: 2;
+  }
+
+  .photoWrap {
+    position: static;
+    transform: none;
+    order: 1;
+    margin-bottom: 32px;
+  }
+
+  .photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .actions {
+    justify-content: center;
+  }
 }
 
 .greeting {
