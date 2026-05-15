@@ -30,7 +30,7 @@ export default function Contact() {
       )}
       <div className={styles.socials}>
         <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/shanuj-patel/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="mailto:you@example.com">Email</a>
       </div>
     </section>
