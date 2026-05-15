@@ -154,13 +154,45 @@
 }
 
 /* Fluent 2 Body 1: 14px / 20px */
+.roleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 56px;
+  gap: 8px;
+}
+
 .role {
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
   color: var(--text-secondary);
-  padding-left: 56px;
-  margin-bottom: 10px;
+}
+
+.expandBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.2s;
+}
+
+.expandBtn:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.expandBtnOpen {
+  transform: rotate(180deg);
+  color: var(--brand);
+  border-color: var(--brand);
 }
 
 .description {
@@ -168,9 +200,9 @@
   line-height: 20px;
   color: var(--muted);
   padding-left: 56px;
-  padding-top: 2px;
-  border-top: 1px solid var(--border);
+  margin-top: 12px;
   padding-top: 12px;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 500px) {

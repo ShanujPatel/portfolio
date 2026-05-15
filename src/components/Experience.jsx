@@ -43,11 +43,7 @@ const jobs = [
 function Logo({ src, alt }) {
   const [error, setError] = useState(false)
   if (error) {
-    return (
-      <div className={styles.logoFallback}>
-        {alt.charAt(0)}
-      </div>
-    )
+    return <div className={styles.logoFallback}>{alt.charAt(0)}</div>
   }
   return (
     <img
@@ -59,50 +55,59 @@ function Logo({ src, alt }) {
   )
 }
 
+function JobCard({ job, isLast }) {
+  const [expanded, setExpanded] = useState(false)
+
+  return (
+    <div className={styles.item}>
+      <div className={styles.line}>
+        <div className={`${styles.dot} ${job.current ? styles.dotCurrent : ''}`} />
+        {!isLast && <div className={styles.connector} />}
+      </div>
+
+      <div className={`${styles.card} ${job.current ? styles.cardCurrent : ''}`}>
+        <div className={styles.cardHeader}>
+          <a href={job.url} target="_blank" rel="noreferrer" className={styles.logoWrap} title={job.company}>
+            <Logo src={job.logo} alt={job.company} />
+          </a>
+          <div className={styles.meta}>
+            <a href={job.url} target="_blank" rel="noreferrer" className={styles.company}>
+              {job.company}
+            </a>
+            <span className={styles.period}>{job.period}</span>
+          </div>
+          {job.current && <span className={styles.badge}>Current</span>}
+        </div>
+
+        <div className={styles.roleRow}>
+          <p className={styles.role}>{job.role}</p>
+          <button
+            className={`${styles.expandBtn} ${expanded ? styles.expandBtnOpen : ''}`}
+            onClick={() => setExpanded(e => !e)}
+            aria-expanded={expanded}
+            aria-label={expanded ? 'Collapse description' : 'Expand description'}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+        </div>
+
+        {expanded && (
+          <p className={styles.description}>{job.description}</p>
+        )}
+      </div>
+    </div>
+  )
+}
+
 export default function Experience() {
   return (
     <section id="experience">
       <h2 className="section-title">Experience</h2>
       <div className={styles.timeline}>
         {jobs.map((job, i) => (
-          <div key={i} className={styles.item}>
-            {/* Vertical line connector */}
-            <div className={styles.line}>
-              <div className={`${styles.dot} ${job.current ? styles.dotCurrent : ''}`} />
-              {i < jobs.length - 1 && <div className={styles.connector} />}
-            </div>
-
-            {/* Card */}
-            <div className={`${styles.card} ${job.current ? styles.cardCurrent : ''}`}>
-              <div className={styles.cardHeader}>
-                <a
-                  href={job.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.logoWrap}
-                  title={job.company}
-                >
-                  <Logo src={job.logo} alt={job.company} />
-                </a>
-                <div className={styles.meta}>
-                  <a
-                    href={job.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.company}
-                  >
-                    {job.company}
-                  </a>
-                  <span className={styles.period}>{job.period}</span>
-                </div>
-                {job.current && (
-                  <span className={styles.badge}>Current</span>
-                )}
-              </div>
-              <p className={styles.role}>{job.role}</p>
-              <p className={styles.description}>{job.description}</p>
-            </div>
-          </div>
+          <JobCard key={i} job={job} isLast={i === jobs.length - 1} />
         ))}
       </div>
     </section>
