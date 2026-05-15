@@ -4,9 +4,15 @@
   padding: 0;
 }
 
+/* Load Segoe UI Variable on Windows; fallback to system fonts */
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif; }
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
 }
 
 #root {

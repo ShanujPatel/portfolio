@@ -2,87 +2,104 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 120px 24px 80px;
+  padding: 96px 24px 80px;
   position: relative;
   overflow: hidden;
-  max-width: 100%;
+  /* Fluent 2 hero: clean white with a subtle brand-tinted gradient */
+  background: linear-gradient(160deg, #ffffff 55%, #ebf3fb 100%);
 }
 
 .content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .greeting {
-  color: var(--accent-light);
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  font-family: monospace;
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .name {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  font-weight: 800;
+  /* Fluent 2 Display token: 68px / 92px semibold */
+  font-size: clamp(40px, 7vw, 68px);
   line-height: 1.1;
-  margin-bottom: 12px;
-  background: linear-gradient(135deg, #fff 40%, var(--accent-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text);
 }
 
 .role {
-  font-size: 1.25rem;
-  color: var(--muted);
+  /* Fluent 2 Title 2: 28px / 36px semibold */
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  color: var(--brand);
   margin-bottom: 16px;
 }
 
 .tagline {
-  font-size: 1.05rem;
-  color: var(--muted);
-  max-width: 480px;
+  /* Fluent 2 Body 1: 14px / 20px */
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-secondary);
+  max-width: 540px;
   margin-bottom: 40px;
 }
 
 .actions {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
+/* Fluent 2 primary button */
 .primary {
-  background: var(--accent);
+  background: var(--brand);
   color: #fff;
-  padding: 14px 32px;
-  border-radius: 8px;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 1rem;
-  transition: opacity 0.2s;
+  font-size: 14px;
+  transition: background 0.1s;
 }
 
-.primary:hover { opacity: 0.85; }
+.primary:hover { background: var(--brand-dark); }
 
+/* Fluent 2 secondary/outline button */
 .secondary {
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   color: var(--text);
-  padding: 14px 32px;
-  border-radius: 8px;
+  background: var(--surface);
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 1rem;
-  transition: border-color 0.2s;
+  font-size: 14px;
+  transition: background 0.1s, border-color 0.1s;
 }
 
-.secondary:hover { border-color: var(--accent); }
+.secondary:hover {
+  background: #f0f0f0;
+  border-color: var(--brand);
+}
 
+/* Decorative Microsoft-style geometric accent */
 .blob {
   position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(124,106,247,0.15) 0%, transparent 70%);
-  border-radius: 50%;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 40%, rgba(0,120,212,0.06) 100%);
   pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .role { font-size: 20px; line-height: 28px; }
 }

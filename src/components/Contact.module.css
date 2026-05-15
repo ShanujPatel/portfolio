@@ -1,82 +1,101 @@
+/* Fluent 2 Body 1 */
 .intro {
-  color: var(--muted);
-  margin-bottom: 40px;
-  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 600px;
+  gap: 12px;
+  max-width: 560px;
 }
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 12px;
 }
 
+/* Fluent 2 text field */
 .form input,
 .form textarea {
   width: 100%;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 14px;
+  line-height: 20px;
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: border-color 0.1s, box-shadow 0.1s;
   outline: none;
 }
 
+.form input:hover,
+.form textarea:hover {
+  border-color: #999;
+}
+
+/* Fluent 2 focus: brand-colored bottom border */
 .form input:focus,
 .form textarea:focus {
-  border-color: var(--accent);
+  border-color: var(--brand);
+  box-shadow: 0 1px 0 0 var(--brand);
 }
 
 .form textarea { resize: vertical; }
 
+/* Fluent 2 primary button */
 .form button {
   align-self: flex-start;
-  background: var(--accent);
+  background: var(--brand);
   color: #fff;
   border: none;
-  padding: 12px 32px;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 8px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.2s;
+  font-family: inherit;
+  transition: background 0.1s;
 }
 
-.form button:hover { opacity: 0.85; }
+.form button:hover { background: var(--brand-dark); }
 
+/* Fluent 2 success message bar */
 .success {
-  color: #4ade80;
-  font-size: 1.1rem;
-  padding: 16px;
-  background: rgba(74,222,128,0.08);
-  border-radius: 8px;
-  border: 1px solid rgba(74,222,128,0.2);
-  max-width: 600px;
+  color: #107c10;
+  font-size: 14px;
+  padding: 12px 16px;
+  background: #dff6dd;
+  border-radius: var(--radius-sm);
+  border: 1px solid #a7d7a8;
+  max-width: 560px;
 }
 
 .socials {
-  margin-top: 48px;
+  margin-top: 40px;
   display: flex;
-  gap: 24px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .socials a {
-  color: var(--muted);
-  font-size: 0.95rem;
-  transition: color 0.2s;
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--brand-light);
+  transition: background 0.1s;
 }
 
 .socials a:hover {
-  color: var(--accent-light);
+  background: var(--brand-lighter);
 }
 
 @media (max-width: 480px) {
