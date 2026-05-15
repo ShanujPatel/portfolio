@@ -23,6 +23,20 @@ const projects = [
     code: '#',
   },
   {
+    title: 'Finance Business Process Improvements',
+    description: 'Worked with Finance teams to transition Excel-based forms to Power Apps and Power Automate, automating manual processes and reducing finance staff workload by over 10 hours weekly.',
+    tags: ['Power Apps', 'Power Automate', 'Excel'],
+    demo: '#',
+    code: '#',
+  },
+  {
+    title: 'Legal & Compliance Process Improvement',
+    description: 'Led development of upgraded compliance processes via Power Platform and SharePoint — including a user-friendly Power Apps interface for staff to document gifts received from suppliers and clients, and Power BI reporting for the Legal team to efficiently track and oversee compliance across the organisation.',
+    tags: ['Power Apps', 'Power Automate', 'SharePoint', 'Power BI'],
+    demo: '#',
+    code: '#',
+  },
+  {
     title: 'M365 Adoption Dashboard',
     description: 'Interactive Power BI dashboard pulling Microsoft 365 usage data via the Graph API, giving leadership real-time visibility of Teams, SharePoint, and OneDrive adoption across the organisation.',
     tags: ['Power BI', 'Graph API', 'SharePoint Online'],
