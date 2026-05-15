@@ -9,6 +9,7 @@ const jobs = [
     period: '2025 – Present',
     role: 'IT Power Platform Engineer',
     current: true,
+    description: 'Add your description here — outline your key responsibilities, achievements, and the technologies you work with day-to-day in this role.',
   },
   {
     company: 'Dr. Martens',
@@ -17,6 +18,7 @@ const jobs = [
     period: '2020 – 2025',
     role: 'Microsoft 365 Engineer',
     current: false,
+    description: 'Lead the development and support of Microsoft 365 and the Power Platform with the aim of maximising platforms\' capabilities and maintaining a high standard of functionality. Assessed existing business processes and recommended improvements utilising Microsoft 365. Ensured thorough documentation of new solutions and provided adequate training for super users aimed at enhancing user proficiency in Microsoft 365 applications. Provided third-line support for daily operational issues for Azure, Microsoft 365 and Power Platform. Stayed informed about new Microsoft technologies to contribute to future business advancements, as well as helping to plan future roadmaps for embedding new Microsoft technologies.',
   },
   {
     company: 'NYK Group Europe',
@@ -25,6 +27,7 @@ const jobs = [
     period: '2018 – 2020',
     role: 'Digital Business Analyst (Microsoft 365)',
     current: false,
+    description: 'Add your description here — outline your key responsibilities, achievements, and the technologies you worked with during this role.',
   },
   {
     company: 'Integrity Global',
@@ -33,6 +36,7 @@ const jobs = [
     period: '2015 – 2018',
     role: 'IT Apprentice → Data Management Officer',
     current: false,
+    description: 'Add your description here — outline your key responsibilities, achievements, and the technologies you worked with during this role.',
   },
 ]
 
@@ -96,6 +100,7 @@ export default function Experience() {
                 )}
               </div>
               <p className={styles.role}>{job.role}</p>
+              <p className={styles.description}>{job.description}</p>
             </div>
           </div>
         ))}

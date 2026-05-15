@@ -157,8 +157,20 @@
 .role {
   font-size: 14px;
   line-height: 20px;
+  font-weight: 600;
   color: var(--text-secondary);
-  padding-left: 56px; /* aligns under company name past the logo */
+  padding-left: 56px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--muted);
+  padding-left: 56px;
+  padding-top: 2px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
 }
 
 @media (max-width: 500px) {
