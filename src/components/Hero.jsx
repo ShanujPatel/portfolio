@@ -1,4 +1,3 @@
-import profilePhoto from '../assets/profile.jpg'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -23,9 +22,6 @@ export default function Hero() {
             get_in_touch
           </a>
         </div>
-      </div>
-      <div className={styles.photoWrap}>
-        <img src={profilePhoto} alt="Shanuj Patel" className={styles.photo} />
       </div>
     </section>
   )
