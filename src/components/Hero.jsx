@@ -17,10 +17,10 @@ export default function Hero() {
         </p>
         <div className={styles.actions}>
           <a href="#projects" className={styles.primary}>
-            <span className={styles.prompt}>$</span> view_work
+            view_work
           </a>
           <a href="#contact" className={styles.secondary}>
-            <span className={styles.prompt}>$</span> get_in_touch
+            get_in_touch
           </a>
         </div>
       </div>
