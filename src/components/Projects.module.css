@@ -21,6 +21,7 @@
   position: relative;
   overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
 /* Code-window top bar */
@@ -97,6 +98,17 @@
 .links a:hover {
   color: var(--brand);
   border-color: var(--brand);
+}
+
+.viewMore {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+
+.card:hover .viewMore {
+  color: var(--brand);
 }
 
 /* Carousel controls */
