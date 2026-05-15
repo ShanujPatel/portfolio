@@ -47,7 +47,6 @@
   transition: background 0.15s, border-color 0.15s;
 }
 
-.resumeBtn::before { content: '$'; opacity: 0.5; }
 
 .resumeBtn:hover {
   background: var(--brand-light);
