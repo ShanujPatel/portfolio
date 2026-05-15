@@ -102,6 +102,10 @@
   flex-wrap: wrap;
 }
 
+.roleBottom {
+  margin-top: 32px;
+}
+
 /* Terminal-style buttons */
 .primary, .secondary {
   font-family: var(--font-mono);

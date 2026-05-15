@@ -22,7 +22,7 @@ export default function Hero() {
             get_in_touch
           </a>
         </div>
-        <p className={styles.role}>&lt; Smart Home Enthusiast /&gt;</p>
+        <p className={`${styles.role} ${styles.roleBottom}`}>&lt; Smart Home Enthusiast /&gt;</p>
       </div>
     </section>
   )
