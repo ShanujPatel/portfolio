@@ -13,7 +13,7 @@ const jobs = [
   {
     company: 'Dr. Martens',
     url: 'https://www.drmartens.com/uk/en_gb/',
-    logo: 'https://logo.clearbit.com/drmartens.com',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Dr._Martens_Logo.svg/3840px-Dr._Martens_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
     period: '2020 – 2025',
     role: 'Microsoft 365 Engineer',
     current: false,
