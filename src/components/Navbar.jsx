@@ -40,7 +40,6 @@ export default function Navbar({ theme, onToggleTheme }) {
         {links.map(l => (
           <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>{l}</a>
         ))}
-        <a href="#contact" className={styles.cta} onClick={() => setOpen(false)}>Hire Me</a>
       </nav>
       <div className={styles.right}>
         <button
