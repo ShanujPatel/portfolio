@@ -14,7 +14,6 @@ export default function Hero() {
           {' '}I design and deliver intelligent M365 and Power Platform solutions that streamline business processes and drive productivity.{' '}
           <span className={styles.commentMark}>*/</span>
         </p>
-        <p className={styles.role}>&lt; Smart Home Enthusiast /&gt;</p>
         <div className={styles.actions}>
           <a href="#projects" className={styles.primary}>
             view_work
@@ -23,6 +22,7 @@ export default function Hero() {
             get_in_touch
           </a>
         </div>
+        <p className={styles.role}>&lt; Smart Home Enthusiast /&gt;</p>
       </div>
     </section>
   )
