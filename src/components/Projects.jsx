@@ -16,6 +16,13 @@ const projects = [
     code: '#',
   },
   {
+    title: 'Retail Support Portals',
+    description: 'Collaborated with Retail teams to build end-to-end support portals using Power Platform — Power Apps for intuitive issue logging in stores, Power Automate flows for approvals, and Power BI reports for comprehensive reporting. Delivered significant time savings for stores and back-office teams in handling and resolving issues.',
+    tags: ['Power Apps', 'Power Automate', 'Power BI'],
+    demo: '#',
+    code: '#',
+  },
+  {
     title: 'M365 Adoption Dashboard',
     description: 'Interactive Power BI dashboard pulling Microsoft 365 usage data via the Graph API, giving leadership real-time visibility of Teams, SharePoint, and OneDrive adoption across the organisation.',
     tags: ['Power BI', 'Graph API', 'SharePoint Online'],
