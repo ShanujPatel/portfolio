@@ -2,23 +2,23 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A full-stack web app that solves a real-world problem using React and Node.js.',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    title: 'Employee Onboarding Automation',
+    description: 'End-to-end Power Automate flow that provisions Microsoft 365 accounts, assigns licences, creates SharePoint sites, and sends a personalised Teams welcome — reducing onboarding time from days to minutes.',
+    tags: ['Power Automate', 'SharePoint', 'Teams', 'Graph API'],
     demo: '#',
     code: '#',
   },
   {
-    title: 'Project Two',
-    description: 'An e-commerce platform with payment integration and real-time inventory.',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
+    title: 'IT Helpdesk Power App',
+    description: 'Canvas app built in Power Apps enabling staff to log, track, and escalate IT requests. Integrated with SharePoint lists for data storage and Power Automate for email notifications and SLA alerts.',
+    tags: ['Power Apps', 'Power Automate', 'SharePoint'],
     demo: '#',
     code: '#',
   },
   {
-    title: 'Project Three',
-    description: 'A mobile-first dashboard with data visualisation and live updates.',
-    tags: ['TypeScript', 'D3.js', 'WebSockets'],
+    title: 'M365 Adoption Dashboard',
+    description: 'Interactive Power BI dashboard pulling Microsoft 365 usage data via the Graph API, giving leadership real-time visibility of Teams, SharePoint, and OneDrive adoption across the organisation.',
+    tags: ['Power BI', 'Graph API', 'SharePoint Online'],
     demo: '#',
     code: '#',
   },

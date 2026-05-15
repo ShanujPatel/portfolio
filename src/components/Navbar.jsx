@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <a href="#hero" className={styles.logo}>{'<YourName />'}</a>
+      <a href="#hero" className={styles.logo}>{'<ShanujPatel />'}</a>
       <nav className={`${styles.links} ${open ? styles.open : ''}`}>
         {links.map(l => (
           <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>{l}</a>

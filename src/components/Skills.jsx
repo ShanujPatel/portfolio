@@ -1,9 +1,10 @@
 import styles from './Skills.module.css'
 
 const skills = [
-  { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
-  { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'REST APIs'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'Figma', 'VS Code'] },
+  { category: 'Microsoft 365', items: ['SharePoint Online', 'Microsoft Teams', 'Exchange Online', 'OneDrive'] },
+  { category: 'Power Platform', items: ['Power Automate', 'Power Apps', 'Power BI', 'Power Virtual Agents'] },
+  { category: 'Azure & Admin', items: ['Azure AD / Entra ID', 'Intune', 'Microsoft Graph API', 'Conditional Access'] },
+  { category: 'Dev & Scripting', items: ['PowerShell', 'PnP PowerShell', 'JSON / REST APIs', 'Git'] },
 ]
 
 export default function Skills() {

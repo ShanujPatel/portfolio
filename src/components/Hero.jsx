@@ -5,10 +5,10 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       <div className={styles.content}>
         <p className={styles.greeting}>Hi, I'm</p>
-        <h1 className={styles.name}>Your Name</h1>
-        <p className={styles.role}>Full-Stack Developer &amp; Designer</p>
+        <h1 className={styles.name}>Shanuj Patel</h1>
+        <p className={styles.role}>Microsoft 365 &amp; Power Platform Engineer</p>
         <p className={styles.tagline}>
-          I build fast, accessible, and beautiful web experiences.
+          I design and deliver intelligent Microsoft 365 and Power Platform solutions that streamline business processes and drive productivity.
         </p>
         <div className={styles.actions}>
           <a href="#projects" className={styles.primary}>View My Work</a>
