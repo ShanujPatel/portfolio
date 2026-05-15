@@ -58,6 +58,32 @@
   background: var(--brand-dark) !important;
 }
 
+.right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+.themeToggle:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
 .burger {
   display: none;
   flex-direction: column;

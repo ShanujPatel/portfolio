@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+/* Prevent flash of wrong theme before JS runs */
+html { background: #141414; }
+html[data-theme="light"] { background: #f5f5f5; }
+
 /* Fluent 2 design tokens */
 :root {
   /* Brand — Microsoft Blue palette */
@@ -79,4 +83,31 @@ h2.section-title::after {
   background: var(--brand);
   margin-top: 8px;
   border-radius: 2px;
+}
+
+/* ── Fluent 2 Dark Theme ── */
+[data-theme="dark"] {
+  --brand: #479ef5;
+  --brand-dark: #2886de;
+  --brand-darker: #1a6ec7;
+  --brand-light: #1a3a5c;
+  --brand-lighter: #0f2440;
+
+  --bg: #141414;
+  --surface: #1c1c1c;
+  --surface-alt: #242424;
+  --border: #333333;
+  --border-strong: #4d4d4d;
+
+  --text: #ffffff;
+  --text-secondary: #d6d6d6;
+  --muted: #999999;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.5);
+}
+
+[data-theme="dark"] body {
+  background: var(--bg);
 }
