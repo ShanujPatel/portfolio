@@ -5,7 +5,7 @@ const jobs = [
   {
     company: 'McLaren Construction',
     url: 'https://www.mclarengroup.com/',
-    logo: 'https://logo.clearbit.com/mclarengroup.com',
+    logo: 'https://i0.wp.com/asbp.org.uk/wp-content/uploads/2025/07/McLaren.png?fit=1200%2C1200&ssl=1&w=640',
     period: '2025 – Present',
     role: 'IT Power Platform Engineer',
     current: true,
@@ -21,7 +21,7 @@ const jobs = [
   {
     company: 'NYK Group Europe',
     url: 'https://nykeurope.com/',
-    logo: 'https://logo.clearbit.com/nykeurope.com',
+    logo: 'https://media.licdn.com/dms/image/v2/C510BAQHwJjFbTGtL2Q/company-logo_200_200/company-logo_200_200/0/1631345382532?e=2147483647&v=beta&t=hnUbN7xh-93E2YJ9_fb4PercCrmeoMgKq2_DH72sS7I',
     period: '2018 – 2020',
     role: 'Digital Business Analyst (Microsoft 365)',
     current: false,
@@ -29,7 +29,7 @@ const jobs = [
   {
     company: 'Integrity Global',
     url: 'https://www.integrityglobal.com/',
-    logo: 'https://logo.clearbit.com/integrityglobal.com',
+    logo: 'https://www.developmentaid.org/files/organizationLogos/integrity-40606.jpg',
     period: '2015 – 2018',
     role: 'IT Apprentice → Data Management Officer',
     current: false,
