@@ -1,0 +1,88 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.greeting {
+  color: var(--accent-light);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.name {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #fff 40%, var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.role {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.primary:hover { opacity: 0.85; }
+
+.secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.secondary:hover { border-color: var(--accent); }
+
+.blob {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124,106,247,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
