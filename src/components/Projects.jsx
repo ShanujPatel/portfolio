@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect, useCallback } from 'react'
 import styles from './Projects.module.css'
 
 const projects = [
@@ -45,29 +46,84 @@ const projects = [
   },
 ]
 
+const GAP = 16
+
 export default function Projects() {
+  const [current, setCurrent] = useState(0)
+  const wrapRef = useRef(null)
+  const [stepPx, setStepPx] = useState(0)
+  const [visibleCount, setVisibleCount] = useState(3)
+
+  const measure = useCallback(() => {
+    if (!wrapRef.current) return
+    const w = wrapRef.current.offsetWidth
+    const visible = w < 600 ? 1 : 3
+    setVisibleCount(visible)
+    const cardW = (w - (visible - 1) * GAP) / visible
+    setStepPx(cardW + GAP)
+    setCurrent(c => Math.min(c, projects.length - visible))
+  }, [])
+
+  useEffect(() => {
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [measure])
+
+  const max = projects.length - visibleCount
+  const cardWidth = stepPx ? stepPx - GAP : undefined
+
   return (
     <section id="projects">
       <p className="section-num">// 004</p>
       <h2 className="section-title">Projects</h2>
-      <div className={styles.grid}>
-        {projects.map(p => (
-          <div key={p.title} className={styles.card}>
-            <div className={styles.cardTop}>
-              <h3>{p.title}</h3>
-              <p>{p.description}</p>
-            </div>
-            <div className={styles.cardBottom}>
-              <div className={styles.tags}>
-                {p.tags.map(t => <span key={t}>{t}</span>)}
+      <div className={styles.carouselWrap} ref={wrapRef}>
+        <div
+          className={styles.track}
+          style={{ transform: `translateX(${-current * stepPx}px)` }}
+        >
+          {projects.map(p => (
+            <div key={p.title} className={styles.card} style={{ width: cardWidth }}>
+              <div className={styles.cardTop}>
+                <h3>{p.title}</h3>
+                <p>{p.description}</p>
               </div>
-              <div className={styles.links}>
-                <a href={p.demo} target="_blank" rel="noreferrer">Live</a>
-                <a href={p.code} target="_blank" rel="noreferrer">Code</a>
+              <div className={styles.cardBottom}>
+                <div className={styles.tags}>
+                  {p.tags.map(t => <span key={t}>{t}</span>)}
+                </div>
+                <div className={styles.links}>
+                  <a href={p.demo} target="_blank" rel="noreferrer">Live</a>
+                  <a href={p.code} target="_blank" rel="noreferrer">Code</a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+      <div className={styles.controls}>
+        <button
+          className={styles.navBtn}
+          onClick={() => setCurrent(c => Math.max(0, c - 1))}
+          disabled={current === 0}
+          aria-label="Previous"
+        >‹</button>
+        <div className={styles.dots}>
+          {Array.from({ length: max + 1 }, (_, i) => (
+            <button
+              key={i}
+              className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+        <button
+          className={styles.navBtn}
+          onClick={() => setCurrent(c => Math.min(max, c + 1))}
+          disabled={current === max}
+          aria-label="Next"
+        >›</button>
       </div>
     </section>
   )

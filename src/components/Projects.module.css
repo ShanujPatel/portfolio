@@ -1,10 +1,15 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.carouselWrap {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
   gap: 16px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card {
+  flex-shrink: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -12,10 +17,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  min-height: 200px;
+  min-height: 220px;
   position: relative;
   overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 /* Code-window top bar */
@@ -92,4 +97,64 @@
 .links a:hover {
   color: var(--brand);
   border-color: var(--brand);
+}
+
+/* Carousel controls */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.navBtn {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  line-height: 1;
+  padding: 0;
+}
+
+.navBtn:hover:not(:disabled) {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.dotActive {
+  background: var(--brand);
+  width: 18px;
+  border-radius: 3px;
 }
