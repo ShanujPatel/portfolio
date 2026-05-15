@@ -104,6 +104,7 @@ function JobCard({ job, isLast }) {
 export default function Experience() {
   return (
     <section id="experience">
+      <p className="section-num">// 002</p>
       <h2 className="section-title">Experience</h2>
       <div className={styles.timeline}>
         {jobs.map((job, i) => (

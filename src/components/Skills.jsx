@@ -10,6 +10,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills">
+      <p className="section-num">// 003</p>
       <h2 className="section-title">Skills</h2>
       <div className={styles.grid}>
         {skills.map(({ category, items }) => (

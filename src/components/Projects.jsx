@@ -27,6 +27,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects">
+      <p className="section-num">// 004</p>
       <h2 className="section-title">Projects</h2>
       <div className={styles.grid}>
         {projects.map(p => (

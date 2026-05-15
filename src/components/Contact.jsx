@@ -12,6 +12,7 @@ export default function Contact() {
 
   return (
     <section id="contact">
+      <p className="section-num">// 005</p>
       <h2 className="section-title">Get In Touch</h2>
       <p className={styles.intro}>
         Have a project in mind or just want to say hi? Drop me a message.
@@ -21,11 +22,17 @@ export default function Contact() {
       ) : (
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.row}>
-            <input name="name" type="text" placeholder="Your Name" required />
-            <input name="email" type="email" placeholder="Your Email" required />
+            <div className={styles.inputWrap}>
+              <input name="name" type="text" placeholder="your_name" required />
+            </div>
+            <div className={styles.inputWrap}>
+              <input name="email" type="email" placeholder="your_email" required />
+            </div>
           </div>
-          <textarea name="message" rows={5} placeholder="Your Message" required />
-          <button type="submit">Send Message</button>
+          <div className={styles.textareaWrap}>
+            <textarea name="message" rows={5} placeholder="your_message" required />
+          </div>
+          <button type="submit">send_message</button>
         </form>
       )}
       <div className={styles.socials}>

@@ -3,6 +3,7 @@ import styles from './About.module.css'
 export default function About() {
   return (
     <section id="about">
+      <p className="section-num">// 001</p>
       <h2 className="section-title">About Me</h2>
       <div className={styles.grid}>
         <div className={styles.avatar}>

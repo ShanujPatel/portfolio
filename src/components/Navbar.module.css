@@ -9,18 +9,24 @@
   justify-content: space-between;
   padding: 0 40px;
   height: 48px;
-  background: var(--surface);
+  background: rgba(9, 9, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.2s;
+  transition: border-color 0.2s;
+}
+
+[data-theme="light"] .nav {
+  background: rgba(240, 244, 255, 0.85);
 }
 
 .scrolled {
-  box-shadow: var(--shadow-md);
+  border-bottom-color: var(--border-strong);
 }
 
 .logo {
-  font-size: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
   font-weight: 600;
   color: var(--brand);
   letter-spacing: 0;
@@ -29,33 +35,22 @@
 .links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .links a {
-  color: var(--text-secondary);
-  font-size: 14px;
-  font-weight: 400;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 12px;
   padding: 6px 12px;
   border-radius: var(--radius-sm);
-  transition: background 0.1s, color 0.1s;
+  transition: color 0.15s, background 0.15s;
+  letter-spacing: 0.3px;
 }
 
 .links a:hover {
-  background: #f0f0f0;
-  color: var(--text);
-}
-
-.cta {
-  background: var(--brand) !important;
-  color: #fff !important;
-  font-weight: 600 !important;
-  border-radius: var(--radius-sm) !important;
-  transition: background 0.1s !important;
-}
-
-.cta:hover {
-  background: var(--brand-dark) !important;
+  color: var(--brand);
+  background: var(--brand-lighter);
 }
 
 .right {
@@ -69,19 +64,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: var(--radius-sm);
-  border: none;
+  border: 1px solid var(--border);
   background: none;
-  color: var(--text-secondary);
+  color: var(--muted);
   cursor: pointer;
-  transition: background 0.1s, color 0.1s;
+  transition: border-color 0.15s, color 0.15s;
 }
 
 .themeToggle:hover {
-  background: var(--border);
-  color: var(--text);
+  border-color: var(--brand);
+  color: var(--brand);
 }
 
 .burger {
@@ -96,15 +91,17 @@
 
 .burger span {
   display: block;
-  width: 20px;
-  height: 1.5px;
-  background: var(--text);
+  width: 18px;
+  height: 1px;
+  background: var(--muted);
   border-radius: 1px;
+  transition: background 0.15s;
 }
+
+.burger:hover span { background: var(--brand); }
 
 @media (max-width: 640px) {
   .nav { padding: 0 20px; }
-
   .burger { display: flex; }
 
   .links {
@@ -119,7 +116,6 @@
     padding: 8px;
     gap: 2px;
     border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-md);
   }
 
   .links.open { display: flex; }

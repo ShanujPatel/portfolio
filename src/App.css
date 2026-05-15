@@ -5,109 +5,94 @@
 }
 
 /* Prevent flash of wrong theme before JS runs */
-html { background: #141414; }
-html[data-theme="light"] { background: #f5f5f5; }
+html { background: #09090f; }
+html[data-theme="light"] { background: #f0f4ff; }
 
-/* Fluent 2 design tokens */
+/* ── Design tokens: Dark (default) ── */
 :root {
-  /* Brand — Microsoft Blue palette */
-  --brand: #0078d4;
-  --brand-dark: #004e8c;
-  --brand-darker: #003966;
-  --brand-light: #cce4f6;
-  --brand-lighter: #ebf3fb;
+  --bg: #09090f;
+  --surface: #0e0e1a;
+  --surface-alt: #131325;
+  --border: #1a1a35;
+  --border-strong: #252550;
 
-  /* Neutrals */
-  --bg: #f5f5f5;
-  --surface: #ffffff;
-  --surface-alt: #fafafa;
-  --border: #e0e0e0;
-  --border-strong: #c8c8c8;
+  --brand: #60a5fa;
+  --brand-dark: #3b82f6;
+  --brand-darker: #2563eb;
+  --brand-light: rgba(96,165,250,0.15);
+  --brand-lighter: rgba(96,165,250,0.07);
 
-  /* Text */
-  --text: #1a1a1a;
-  --text-secondary: #4d4d4d;
-  --muted: #808080;
+  --text: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --muted: #475569;
 
-  /* Elevation shadows (Fluent 2 shadow4 / shadow16) */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 8px rgba(0,0,0,0.14), 0 0 2px rgba(0,0,0,0.12);
-  --shadow-lg: 0 8px 16px rgba(0,0,0,0.14), 0 0 2px rgba(0,0,0,0.12);
+  --shadow-sm: 0 0 0 1px rgba(96,165,250,0.06), 0 2px 6px rgba(0,0,0,0.5);
+  --shadow-md: 0 0 0 1px rgba(96,165,250,0.08), 0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg: 0 0 0 1px rgba(96,165,250,0.1), 0 8px 32px rgba(0,0,0,0.7);
 
-  /* Border radius */
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
   --radius-xl: 20px;
+
+  --font-mono: 'Cascadia Code', 'Cascadia Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ── Light theme overrides ── */
+[data-theme="light"] {
+  --bg: #f0f4ff;
+  --surface: #ffffff;
+  --surface-alt: #f8faff;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --brand-darker: #1e40af;
+  --brand-light: rgba(37,99,235,0.12);
+  --brand-lighter: rgba(37,99,235,0.05);
+
+  --text: #0f172a;
+  --text-secondary: #334155;
+  --muted: #64748b;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
   color: var(--text);
-  /* Fluent 2 web font stack */
   font-family: 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
 
-a {
-  color: var(--brand);
-  text-decoration: none;
-}
+a { color: var(--brand); text-decoration: none; }
 
 section {
-  padding: 80px 24px;
+  padding: 96px 24px;
   max-width: 960px;
   margin: 0 auto;
 }
 
+/* Section number label — monospace, above every title */
+p.section-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--brand);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
 h2.section-title {
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 600;
-  margin-bottom: 40px;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 48px;
   color: var(--text);
-  position: relative;
-  display: inline-block;
-}
-
-h2.section-title::after {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 3px;
-  background: var(--brand);
-  margin-top: 8px;
-  border-radius: 2px;
-}
-
-/* ── Fluent 2 Dark Theme ── */
-[data-theme="dark"] {
-  --brand: #479ef5;
-  --brand-dark: #2886de;
-  --brand-darker: #1a6ec7;
-  --brand-light: #1a3a5c;
-  --brand-lighter: #0f2440;
-
-  --bg: #141414;
-  --surface: #1c1c1c;
-  --surface-alt: #242424;
-  --border: #333333;
-  --border-strong: #4d4d4d;
-
-  --text: #ffffff;
-  --text-secondary: #d6d6d6;
-  --muted: #999999;
-
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 8px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.5);
-  --shadow-lg: 0 8px 16px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.5);
-}
-
-[data-theme="dark"] body {
-  background: var(--bg);
 }
