@@ -35,7 +35,7 @@ export default function Navbar({ theme, onToggleTheme }) {
 
   return (
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <a href="#hero" className={styles.logo}>{'<Shanuj Patel />'}</a>
+      <a href="#hero" className={styles.logo}>{'< Shanuj Patel />'}</a>
       <nav className={`${styles.links} ${open ? styles.open : ''}`}>
         {links.map(l => (
           <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>{l}</a>
